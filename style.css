@@ -1,0 +1,19 @@
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; }
+.container { max-width: 960px; margin: 20px auto; padding: 0 20px; }
+nav { background-color: #fff; padding: 10px 40px; border-bottom: 1px solid #ddd; }
+nav a { text-decoration: none; color: #2c3e50; }
+h1, h2, h3 { color: #2c3e50; }
+.actions { margin-bottom: 20px; }
+.button { background-color: #3498db; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; border: none; cursor: pointer; font-size: 16px; }
+.button:hover { background-color: #2980b9; }
+.card { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+.campaign-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+.stats { display: flex; justify-content: space-around; text-align: center; margin-top: 20px; }
+.stat-item span { font-size: 24px; font-weight: bold; color: #3498db; display: block; }
+.stat-item label { font-size: 14px; color: #7f8c8d; }
+.form-container { display: flex; flex-direction: column; }
+.form-container label { margin-bottom: 5px; font-weight: bold; }
+.form-container input, .form-container textarea, .form-container select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px; font-size: 16px; }
+.form-container button { align-self: flex-start; }
+ul { list-style-type: none; padding: 0; }
+ul li { background-color: #ecf0f1; margin: 5px 0; padding: 10px; border-radius: 4px; }
