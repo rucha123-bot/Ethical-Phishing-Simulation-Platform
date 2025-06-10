@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+{% block title %}New Campaign{% endblock %}
+{% block content %}
+    <h2>Create a New Phishing Campaign</h2>
+    <form method="post" class="form-container">
+        <label for="name">Campaign Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="template">Phishing Template</label>
+        <select name="template" id="template" required>
+            <option value="password_reset">Password Reset</option>
+            <option value="storage_full">Cloud Storage Full</option>
+        </select>
+
+        <label for="emails">Target Emails (comma-separated)</label>
+        <textarea name="emails" id="emails" rows="5" placeholder="user1@lab.local, user2@lab.local" required></textarea>
+
+        <button type="submit" class="button">Launch Campaign</button>
+    </form>
+{% endblock %}
