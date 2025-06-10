@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+    <div class="actions">
+        <a href="{{ url_for('new_campaign') }}" class="button">New Campaign</a>
+    </div>
+    <h2>Active Campaigns</h2>
+    <div class="campaign-list">
+        {% for campaign in campaigns %}
+        <div class="card">
+            <h3>{{ campaign.name }}</h3>
+            <p><strong>Template:</strong> {{ campaign.template_name }}</p>
+            <p><strong>Created:</strong> {{ campaign.created_at.split('.')[0] }}</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <span>{{ stats[campaign.id].open_rate | round(1) }}%</span>
+                    <label>Opened</label>
+                </div>
+                <div class="stat-item">
+                    <span>{{ stats[campaign.id].click_rate | round(1) }}%</span>
+                    <label>Clicked</label>
+                </div>
+                <div class="stat-item">
+                    <span>{{ stats[campaign.id].success_rate | round(1) }}%</span>
+                    <label>Compromised</label>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <p>No campaigns yet. Create one to get started!</p>
+        {% endfor %}
+    </div>
+{% endblock %}
